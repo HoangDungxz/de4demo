@@ -268,7 +268,7 @@ a {
 .main-banner-des {
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.7142;
   margin-bottom: 55px;
 }
 .main-banner-shop_now a {
@@ -342,4 +342,29 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.category-product-content-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.category-product-content_icon {
+  max-width: 70px;
+  width: 100%;
+}
+.category-product-content_icon img {
+  width: auto;
+  max-width: 100%;
+}
+.category-product-content_title {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 31px 0 31px 0;
+}
+.category-product-content_des {
+  font-size: 14px;
+  line-height: 1.7142;
 }

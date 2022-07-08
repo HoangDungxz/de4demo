@@ -29,7 +29,7 @@
 	&-des {
 		font-size: 14px;
 		font-weight: 400;
-		line-height: 24px;
+		line-height: 1.7142;
 		margin-bottom: 55px;
 	}
 	&-shop_now a {
@@ -103,6 +103,34 @@
 				height: 100%;
 				object-fit: contain;
 			}
+		}
+	}
+	&-content {
+		&-inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column; // căn dọc
+			text-align: center;
+		}
+
+		&_icon {
+			max-width: 70px;
+			width: 100%;
+			img {
+				width: auto; // giữ lại kích cỡ ảnh gốc
+				max-width: 100%; // nếu ảnh gốc width > 70px witdth = 70px
+			}
+		}
+		&_title {
+			text-transform: uppercase; // Chữ hoa
+			font-size: 18px;
+			font-weight: 700;
+			margin: 31px 0 31px 0;
+		}
+		&_des {
+			font-size: 14px;
+			line-height: 1.7142;
 		}
 	}
 }
