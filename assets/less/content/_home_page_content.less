@@ -39,7 +39,7 @@
 		border: 1px solid @color-white;
 		text-transform: uppercase;
 		font-size: 14px;
-		line-height: 24px;
+		line-height: 1.7142;
 	}
 }
 
@@ -70,6 +70,39 @@
 		}
 		&-slogan {
 			font-size: 20px;
+		}
+	}
+}
+
+// Category product
+.category-product {
+	margin-top: -77px;
+
+	&-row {
+		.flexbox(); //Dàn ngang
+		filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+		background-color: @color-white;
+	}
+	&-col {
+		width: calc(100% / 3); // Độ rộng của cột 33.3333%
+		.flex(100% / 3); // Độ rộng của cột 33.3333%
+	}
+	&-item {
+		display: block;
+		& > div {
+			padding-top: calc(250 / 390 * 100%);
+			position: relative;
+			& > img,
+			> div {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
 		}
 	}
 }
