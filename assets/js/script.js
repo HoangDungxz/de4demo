@@ -1,11 +1,13 @@
 $(document).ready(function () {
 	$('.header-bar').on('click', function (e) {
 		$('.header-navbar').addClass('active');
+		$('body').addClass('stop-scrolling');
 	});
 
 	$('.header-navbar').on('click', function (e) {
 		if ($(e.target).closest('.header-navbar ul').length <= 0) {
 			$('.header-navbar').removeClass('active');
+			$('body').removeClass('stop-scrolling');
 		}
 	});
 
