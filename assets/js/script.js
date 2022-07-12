@@ -24,4 +24,15 @@ $(document).ready(function () {
 		dots: true, // hiện dot
 		arrows: false, // bỏ mũi tên 2 bên
 	});
+
+	// click vào site-footer-nav_heading
+	$('.site-footer-nav_heading').on('click', function (e) {
+		// remove class active ở mọi nav_list
+		const footer_list = $('.site-footer-nav_heading').next();
+		footer_list.removeClass('active');
+
+		// thêm class active ở cùng cấp với site-footer-nav_heading được clich (this)
+		const this_list = $(this).next();
+		this_list.addClass('active');
+	});
 });

@@ -345,7 +345,7 @@
 		color: @color-gray;
 	}
 	&-name {
-		margin-top: 24px;
+		margin-top: 30px;
 		font-size: 18px;
 		line-height: 1.6666; // 30 / 18
 		font-weight: 700;
@@ -372,6 +372,56 @@
 					color: @color-red;
 				}
 			}
+		}
+	}
+}
+
+// Brand
+.brand {
+	margin-top: 145px;
+
+	&-col {
+		.col(2); // chia 6 cột
+	}
+	&-logo {
+		padding-top: calc(151 / 170 * 100%); // tạo khung
+		position: relative;
+		img {
+			width: auto;
+			max-width: 90%;
+			min-width: 80%;
+			position: absolute; // đưa lên khung
+			top: 50%; // căn giữa
+			left: 50%;
+			.translate(-50%, -50%);
+		}
+	}
+	.row {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			top: -1px; // Đường viền bên trên nội dung
+			left: 50%;
+			.translateX(-50%); // cho ra giữa
+			width: calc(100% - 30px); // Vì row tràn ngoài lề 2 bên 15px
+			height: 1px;
+			background-color: @color-gray3;
+		}
+	}
+}
+
+@media only screen and (max-width: 1023.9px) {
+	.brand {
+		&-col {
+			.col(4); // chia 3 cột
+		}
+	}
+}
+@media only screen and (max-width: 599.9px) {
+	.brand {
+		&-col {
+			.col(6); // chia 3 cột
 		}
 	}
 }
