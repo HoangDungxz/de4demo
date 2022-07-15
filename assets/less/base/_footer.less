@@ -2,8 +2,9 @@
 .site-footer {
 	background-color: @color-black2; // Màu nên footer
 	color: @color-gray; // Màu chữ chủ đạo
+
 	&_heading {
-		padding: 100px 15px 15px; // cách cách phần tử khác và tạo lề 15px
+		padding: 100px 15px 34px; // cách cách phần tử khác và tạo lề 15px
 		box-sizing: border-box; // chống tràn
 		width: calc(770px + 30px); // độ rộng của nội dung + 30px padding
 		max-width: 100%; // chiều rộng tự co lại khi màn hình < 770 + 30px
@@ -13,7 +14,6 @@
 		line-height: 1.7142; // 24 / 14
 	}
 	&_navbar {
-		margin-top: 88px;
 		.col {
 			.col(3);
 		}
@@ -22,6 +22,20 @@
 			color: @color-gray; // Màu chữ chủ đạo
 			font-size: 14px;
 			line-height: 2.8571; // 40 / 14
+		}
+		.row {
+			padding-top: 70px;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: -1px; // Đường viền bên trên nội dung
+				left: 50%;
+				.translateX(-50%); // cho ra giữa
+				width: calc(100% - 30px); // Vì row tràn ngoài lề 2 bên 15px
+				height: 1px;
+				background-color: @color-gray4;
+			}
 		}
 	}
 	&-nav_heading {
@@ -35,6 +49,8 @@
 }
 
 .footer {
+	position: relative;
+
 	&-logo-img {
 		width: 199px; // độ rộng logo
 		display: block; // có thể thay chiều cao
